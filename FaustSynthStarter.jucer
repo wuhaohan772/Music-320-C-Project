@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="VgFQ39" name="FaustSynthStarter" projectType="audioplug"
+              pluginFormats="buildAU,buildStandalone,buildVST3" maxBinaryFileSize="20971520"
+              bundleIdentifier="edu.stanford.ccrma.HW3Synth" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+              addUsingNamespaceToJuceHeader="0" pluginChannelConfigs="{0,2}"
+              includeBinaryInJuceHeader="1" pluginManufacturer="CCRMA" pluginManufacturerCode="Crma"
+              pluginAUMainType="'aumu'" displaySplashScreen="1" jucerFormatVersion="1"
+              headerPath="/usr/local/include" companyName="CCRMA" companyCopyright="MIT"
+              companyWebsite="https://ccrma.stanford.edu/courses/320c/">
+  <MAINGROUP id="hZhn3B" name="FaustSynthStarter">
+    <GROUP id="{C86A253E-34CB-7C3C-D529-537E251BFE36}" name="Source">
+      <FILE id="kWi6pW" name="FaustVoice.cpp" compile="1" resource="0" file="Source/FaustVoice.cpp"/>
+      <FILE id="asSqiu" name="FaustVoice.h" compile="0" resource="0" file="Source/FaustVoice.h"/>
+      <FILE id="amco0w" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp" xcodeResource="0"/>
+      <FILE id="N5PROF" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h" xcodeResource="0"/>
+    </GROUP>
+    <GROUP id="{A718298A-4FE6-3C27-1C10-47B44785F41C}" name="Resources">
+      <FILE id="NA7oB4" name="Layout_HW3.xml" compile="0" resource="1" file="Resources/Layout_HW3.xml"
+            xcodeResource="1"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_VST3_CAN_REPLACE_VST2="0" JUCE_STRICT_REFCOUNTEDPOINTER="1"
+               FOLEYS_ENABLE_BINARY_DATA="1" FOLEYS_SAVE_EDITED_GUI_IN_PLUGIN_STATE="0"
+               FOLEYS_SHOW_GUI_EDITOR_PALLETTE="0"/>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="HW3Synth"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="HW3Synth"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="~/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="~/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="~/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="~/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="~/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="~/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="~/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="~/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="~/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="~/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="~/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="~/JUCE/modules"/>
+        <MODULEPATH id="foleys_gui_magic" path="~/PGM/modules"/>
+        <MODULEPATH id="juce_dsp" path="~/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="~/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="FaustSynthStarter" debugInformationFormat="ProgramDatabase"
+                       optimisation="1" linkTimeOptimisation="0" isPluginBinaryCopyStep="0"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="FaustSynthStarter" debugInformationFormat="ProgramDatabase"
+                       optimisation="3" linkTimeOptimisation="1" isPluginBinaryCopyStep="0"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="${JUCE_MODULES}"/>
+        <MODULEPATH id="juce_audio_devices" path="${JUCE_MODULES}"/>
+        <MODULEPATH id="juce_audio_formats" path="${JUCE_MODULES}"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="${JUCE_MODULES}"/>
+        <MODULEPATH id="juce_audio_processors" path="${JUCE_MODULES}"/>
+        <MODULEPATH id="juce_audio_utils" path="${JUCE_MODULES}"/>
+        <MODULEPATH id="juce_core" path="${JUCE_MODULES}"/>
+        <MODULEPATH id="juce_data_structures" path="${JUCE_MODULES}"/>
+        <MODULEPATH id="juce_events" path="${JUCE_MODULES}"/>
+        <MODULEPATH id="juce_graphics" path="${JUCE_MODULES}"/>
+        <MODULEPATH id="juce_gui_basics" path="${JUCE_MODULES}"/>
+        <MODULEPATH id="juce_gui_extra" path="${JUCE_MODULES}"/>
+        <MODULEPATH id="foleys_gui_magic" path="..\..\..\..\..\..\..\Git\JUCE\my_modules"/>
+        <MODULEPATH id="juce_dsp" path="${JUCE_MODULES}"/>
+        <MODULEPATH id="juce_cryptography" path="${JUCE_MODULES}"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="foleys_gui_magic" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>

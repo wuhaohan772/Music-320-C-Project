@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<magic>
+  <Styles>
+    <Style name="default">
+      <Nodes/>
+      <Classes>
+        <plot-view border="2" background-color="black" border-color="silver" display="contents"/>
+        <nomargin margin="0" padding="0" border="0"/>
+        <group margin="5" padding="5" border="2" flex-direction="column"/>
+      </Classes>
+      <Types>
+        <Slider border="0" slider-textbox="textbox-below"/>
+        <ToggleButton border="0" max-height="50" caption-size="0" text="Active"/>
+        <TextButton border="0" max-height="50" caption-size="0"/>
+        <ComboBox border="0" max-height="50" caption-size="0"/>
+        <Plot border="0" margin="0" padding="0" background-color="00000000"
+              radius="0"/>
+        <XYDragComponent border="0" margin="0" padding="0" background-color="00000000"
+                         radius="0"/>
+      </Types>
+      <Palettes>
+        <default/>
+      </Palettes>
+    </Style>
+  </Styles>
+  <View flex-direction="column" resizable="1" resize-corner="1" background-color="FF007185"
+        tab-color="FF007185" margin="0" padding="0" border="0" id="b/g color disabled">
+    <View flex-direction="column" background-color="FF007185" border="2"
+          border-color="FF000000" margin="1" padding="0" id="Extra View for b/g color">
+      <View flex-direction="row" min-height="120" max-height="120" background-color="FF007185"
+            border-color="FF000000" id="TopControls">
+        <View flex-direction="column" flex-grow="5" padding="4" margin="1" id="WaveSelectors">
+            <ComboBox parameter="type" caption="Wave Type: "
+                    caption-placement="centred-left"
+                    background-color="FF234489" border-color="FF00C060" border="1"
+                    margin="1" padding="4"/>
+            <ComboBox parameter="fm_type" caption="FM Wave Type: "
+                    caption-placement="centred-left"
+                    background-color="FF234489" border-color="FF00C060" border="1"
+                    margin="1" padding="4"/>
+        </View>
+        <MidiLearn margin="5" background-color="FF234489" border="1"
+                   border-color="FF00C060" flex-grow="1"
+                   caption="MIDI Learn"/>
+      </View>
+      <View background-color="FF007185" id="Sliders">
+        <View flex-direction="column" padding="4" margin="1" caption="Attack"
+              border="1" border-color="FF00C060" background-color="FF234489"
+              pos-x="-1.7301%" pos-y="-6.94444%" pos-width="12.4567%" pos-height="100%">
+          <Slider parameter="attack" slider-type="linear-vertical" default="0.1"
+                  min-value="0" max-value="1" interval="0.01" padding="0" margin="2"
+                  background-color="FF234489" pos-x="-3.22581%" pos-y="1.5015%"
+                  pos-width="100%" pos-height="90.991%"/>
+        </View>
+        <View flex-direction="column" padding="4" margin="1" caption="Decay"
+              border="1" border-color="FF00C060" background-color="FF234489">
+          <Slider parameter="decay" slider-type="linear-vertical" default="0.1"
+                  min-value="0" max-value="1" interval="0.01" padding="0" margin="2"
+                  background-color="FF234489" pos-x="-3.22581%" pos-y="1.5015%"
+                  pos-width="100%" pos-height="90.991%"/>
+        </View>
+        <View flex-direction="column" padding="4" margin="1" caption="Sustain"
+              border="1" border-color="FF00C060" background-color="FF234489">
+          <Slider parameter="sustain" slider-type="linear-vertical" default="0.1"
+                  min-value="0" max-value="1" interval="0.01" padding="0" margin="2"
+                  background-color="FF234489" pos-x="-3.22581%" pos-y="1.5015%"
+                  pos-width="100%" pos-height="90.991%"/>
+        </View>
+        <View flex-direction="column" padding="4" margin="1" caption="Release"
+              border="1" border-color="FF00C060" background-color="FF234489">
+          <Slider parameter="release" slider-type="linear-vertical" default="0.1"
+                  min-value="0" max-value="1" interval="0.01" padding="0" margin="2"
+                  background-color="FF234489" pos-x="-3.22581%" pos-y="1.5015%"
+                  pos-width="100%" pos-height="90.991%"/>
+        </View>
+        <View flex-direction="column" padding="4" margin="1" caption="Ampitude"
+              border="1" border-color="FF00C060" background-color="FF234489">
+          <Slider parameter="amplitude" slider-type="linear-vertical" default="0.1"
+                  min-value="0" max-value="1" interval="0.01" padding="0" margin="2"
+                  background-color="FF234489" pos-x="-3.22581%" pos-y="1.5015%"
+                  pos-width="100%" pos-height="90.991%"/>
+        </View>
+        <View flex-direction="column" padding="4" margin="1" caption="FM Enable"
+              border="1" border-color="FF00C060" background-color="FF234489">
+          <Slider parameter="fm_enable" slider-type="linear-vertical" min-value="0" max-value="1" interval="1" padding="0" margin="2"
+                        background-color="FF234489" pos-x="-3.22581%" pos-y="1.5015%"
+                        pos-width="100%" pos-height="90.991%"/>
+        </View>
+        <View flex-direction="column" padding="4" margin="1" caption="FM Ratio"
+              border="1" border-color="FF00C060" background-color="FF234489">
+          <Slider parameter="fm_ratio" slider-type="linear-vertical" default="0.1"
+                  min-value="0.01" max-value="8" interval="0.01" padding="0" margin="2"
+                  background-color="FF234489" pos-x="-3.22581%" pos-y="1.5015%"
+                  pos-width="100%" pos-height="90.991%"/>
+        </View>
+        <View flex-direction="column" padding="4" margin="1" caption="FM Depth"
+              border="1" border-color="FF00C060" background-color="FF234489">
+          <Slider parameter="fm_depth" slider-type="linear-vertical" default="3.0"
+                  min-value="0" max-value="10" interval="0.1" padding="0" margin="2"
+                  background-color="FF234489" pos-x="-3.22581%" pos-y="1.5015%"
+                  pos-width="100%" pos-height="90.991%"/>
+        </View>
+        <Plot flex-grow="3" caption="Waveform" margin="1" padding="4" border="1"
+              background-color="FF234489" plot-color="FFF3E244" source="oscilloscope"
+              border-color="FF00C060"/>
+      </View>
+      <View min-height="" background-color="FF007185" display="flexbox" border-color="FF000000"
+            flex-grow="1.0" id="Keyboard">
+        <KeyboardComponent background-color="FF007185" pos-x="-0.0672495%" pos-y="53.3531%"
+                           pos-width="100%" pos-height="46.5483%" padding="0" margin="0"
+                           border="0" border-color="FF000000"/>
+      </View>
+    </View>
+  </View>
+</magic>
