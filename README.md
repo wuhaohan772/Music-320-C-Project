@@ -1,4 +1,4 @@
-# Music-320-C-Project
+# Music-320-C-Project SYNTH
 
 This is a synthesizer project for the MUSIC 320E course. It is built using the JUCE framework and Faust for the digital signal processing (DSP) code.
 
